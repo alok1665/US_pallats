@@ -17,7 +17,13 @@ from app.routers import auth, quotes, admin, content, admin_content
 # Postgres took a few extra seconds to accept connections.
 app = FastAPI(title="AK Pallet Blocks API", version="1.0.0")
 
-origins = os.getenv("CORS_ORIGINS", "http://localhost:3000").split(",")
+# CORS origins must match the browser's Origin header EXACTLY (scheme +
+# host + port, no trailing slash). A stray trailing slash or space after a
+# comma in the CORS_ORIGINS env var causes a silent mismatch — the request
+# just fails with a generic "Failed to fetch" in the browser, no useful
+# error anywhere. Strip both defensively so a slightly-off env var value
+# (very easy to introduce when copy-pasting a Railway domain) still works.
+origins = [o.strip().rstrip("/") for o in os.getenv("CORS_ORIGINS", "http://localhost:3000").split(",") if o.strip()]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
@@ -25,6 +31,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+print(f"[startup] CORS allow_origins = {origins}")
 
 app.include_router(auth.router)
 app.include_router(quotes.router)
