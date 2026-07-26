@@ -62,7 +62,12 @@ def init_database_with_retry():
 
 @app.on_event("startup")
 def seed_admin():
-    """Create a default admin account on first boot if none exists, from env vars."""
+    """Ensure the admin account matches ADMIN_EMAIL / ADMIN_PASSWORD on every
+    startup — not just create-once. If those env vars change (e.g. updated
+    on Railway after an earlier deploy already created the account), the
+    existing user's password and role are synced to match rather than
+    silently left stale. Without this, changing ADMIN_PASSWORD and
+    redeploying would have no effect once an admin row already existed."""
     admin_email = os.getenv("ADMIN_EMAIL")
     admin_password = os.getenv("ADMIN_PASSWORD")
     if not admin_email or not admin_password:
@@ -78,6 +83,12 @@ def seed_admin():
                 role=UserRole.admin,
             ))
             db.commit()
+        else:
+            existing.hashed_password = hash_password(admin_password)
+            existing.role = UserRole.admin
+            existing.is_active = True
+            db.commit()
+        print(f"[startup] Admin account synced: {admin_email}")
     finally:
         db.close()
 
