@@ -10,9 +10,9 @@ import {
 } from "@heroicons/react/24/outline";
 
 export const metadata: Metadata = {
-  title: "About Us | AK Pallet Blocks — DFW Pallet Solutions",
+  title: "About Us | Woody Pallet Blocks — DFW Pallet Solutions",
   description:
-    "AK Pallet Blocks provides dependable pallet solutions for businesses across the Dallas–Fort Worth area — new, recycled, custom, heat-treated, and export-ready options with responsive local service.",
+    "Woody Pallet Blocks provides dependable pallet solutions for businesses across the Dallas–Fort Worth area — new, recycled, custom, heat-treated, and export-ready options with responsive local service.",
 };
 
 const approach = [
@@ -69,7 +69,7 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={160}>
             <p className="text-mist text-lg mt-6 leading-relaxed max-w-lg">
-              AK Pallet Blocks was built on hard work, honest service, and a commitment
+              Woody Pallet Blocks was built on hard work, honest service, and a commitment
               to doing the job right. We provide quality pallets and dependable support
               to businesses across the Dallas–Fort Worth area — helping you keep your
               supply chain strong and your operations moving.
@@ -115,7 +115,7 @@ export default function AboutPage() {
             <div className="group photo-card aspect-[4/3] shadow-stack">
               <Image
                 src="/images/about-stack.jpg"
-                alt="Stacked wooden pallets at AK Pallet Blocks"
+                alt="Stacked wooden pallets at Woody Pallet Blocks"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -124,7 +124,7 @@ export default function AboutPage() {
             </div>
           </Reveal>
           <Reveal delay={100}>
-            <span className="font-display uppercase text-xs tracking-widest text-rust">Why AK Pallet Blocks</span>
+            <span className="font-display uppercase text-xs tracking-widest text-rust">Why Woody Pallet Blocks</span>
             <h2 className="font-display uppercase text-3xl md:text-4xl font-bold mt-2 mb-5">
               Built on relationships, not just pallets
             </h2>
