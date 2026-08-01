@@ -6,7 +6,7 @@ import { fetchContent } from "@/lib/api";
 import { CubeIcon } from "@heroicons/react/24/outline";
 
 export const metadata: Metadata = {
-  title: "Industries We Serve | AK Pallet Blocks",
+  title: "Industries We Serve | Woody Pallet Blocks",
   description:
     "Pallets for automotive, retail, manufacturing, and more across the Dallas–Fort Worth area — new, recycled, and custom options built to spec.",
 };
