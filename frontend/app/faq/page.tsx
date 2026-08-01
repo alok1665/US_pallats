@@ -4,7 +4,7 @@ import Reveal from "@/components/Reveal";
 import { fetchContent, ContentItem } from "@/lib/api";
 
 export const metadata: Metadata = {
-  title: "FAQ | AK Pallet Blocks",
+  title: "FAQ | Woody Pallet Blocks",
   description:
     "Answers to common questions about pallet sizes, delivery, recycling, and getting a quote from AK Pallet Blocks in the Dallas–Fort Worth area.",
 };
