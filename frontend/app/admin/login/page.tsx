@@ -29,7 +29,7 @@ export default function AdminLoginPage() {
   return (
     <div className="min-h-[calc(100vh-64px)] flex items-center justify-center bg-ink floor-grid px-5">
       <div className="w-full max-w-sm glass rounded-sm p-8">
-        <Image src="/images/logo.png" alt="AK Pallet Blocks" width={44} height={44} className="w-10 h-10 object-contain mb-6" />
+        <Image src="/images/logo.png" alt="Woody Pallet Blocks" width={44} height={44} className="w-10 h-10 object-contain mb-6" />
         <h1 className="font-display uppercase text-2xl font-bold text-white mb-1">Admin login</h1>
         <p className="text-sm text-mist mb-7">Staff access only.</p>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
