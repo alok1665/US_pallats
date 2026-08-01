@@ -74,7 +74,10 @@ body {
   -webkit-backdrop-filter: blur(16px) saturate(140%);
   border: 1px solid rgba(255,255,255,0.6);
 }
-
+/*service card visiblity set */
+.object-contain {
+    object-fit: cover;
+}
 /* Scroll reveal — pure CSS, no JS dependency. Content is never hidden;
    it always ends at its natural, visible state (fill-mode: both handles
    the "start invisible, end visible" without ever risking a stuck state). */
