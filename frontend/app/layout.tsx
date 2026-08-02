@@ -58,11 +58,11 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                 priority
               />
               <span className="font-display uppercase tracking-wide text-[15px] text-white leading-none">
-                Woody <span className="text-amber">Pallet Blocks</span>
+                Woody <span className="text-amber">Doody Pallets</span>
               </span>
             </Link>
 
-            <div className="hidden md:flex items-center gap-7 text-[13px] font-display uppercase tracking-wider text-mist">
+            <!--Date:: 2nd Aug <div className="hidden md:flex items-center gap-7 text-[13px] font-display uppercase tracking-wider text-mist">
               {navItems.map((item) => (
                 <Link
                   key={item.title}
@@ -72,7 +72,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                   {item.title}
                 </Link>
               ))}
-            </div>
+            </div>-->
 
             <div className="flex items-center gap-3">
               <Link
