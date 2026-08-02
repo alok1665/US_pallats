@@ -17,7 +17,7 @@ import {
 } from "@heroicons/react/24/outline";
 
 export const metadata: Metadata = {
-  title: "Pallet Services | Woody Pallet Blocks — DFW Delivery, Recycling & Custom Solutions",
+  title: "Pallet Services | Woody Doody Pallets — DFW Delivery, Recycling & Custom Solutions",
   description:
     "Pallet services for the Dallas–Fort Worth area including local delivery, new and recycled pallets, custom solutions, heat-treated options, pallet pickup and recycling, and recurring supply.",
 };
