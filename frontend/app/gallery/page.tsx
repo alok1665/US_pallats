@@ -5,7 +5,7 @@ import Reveal from "@/components/Reveal";
 import { fetchContent } from "@/lib/api";
 
 export const metadata: Metadata = {
-  title: "Gallery | Woody Pallet Blocks",
+  title: "Gallery | Woody Doody Pallets",
   description: "A look at our pallets, yard, and warehouse across the Dallas–Fort Worth area.",
 };
 
