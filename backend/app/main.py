@@ -15,7 +15,7 @@ from app.routers import auth, quotes, admin, content, admin_content
 # Railway where services can start in any order — the API process should be
 # able to come up and (once startup finishes) serve requests even if
 # Postgres took a few extra seconds to accept connections.
-app = FastAPI(title="Woody Pallet Blocks API", version="1.0.0")
+app = FastAPI(title="Woody Doddy Pallets API", version="1.0.0")
 
 # CORS origins must match the browser's Origin header EXACTLY (scheme +
 # host + port, no trailing slash). A stray trailing slash or space after a
@@ -214,7 +214,7 @@ def seed_content():
 @app.get("/")
 def root():
     """Root endpoint — used as a simple liveness check by some platforms."""
-    return {"status": "ok", "service": "Woody Pallet Blocks API"}
+    return {"status": "ok", "service": "Woody Doddy Pallets API"}
 
 
 @app.get("/health")
