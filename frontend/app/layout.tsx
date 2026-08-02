@@ -6,7 +6,7 @@ import { fetchContent, fetchSettings, ContentItem } from "@/lib/api";
 import MobileNav from "@/components/MobileNav";
 
 export const metadata: Metadata = {
-  title: "Woody Pallet Blocks — Built to carry. Ready to earn your trust.",
+  title: "Woody Doody Pallets — Built to carry. Ready to earn your trust.",
   description:
     "New, recycled, custom, export-ready, and heat-treated pallets, reliably delivered across Dallas–Fort Worth and surrounding areas.",
 };
@@ -51,7 +51,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             <Link href="/" className="flex items-center gap-2.5 group">
               <Image
                 src="/images/logo.png"
-                alt="Woody Pallet Blocks"
+                alt="Woody Doody Pallets"
                 width={44}
                 height={44}
                 className="w-10 h-10 object-contain"
@@ -92,8 +92,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <div className="max-w-7xl mx-auto px-5 md:px-8 py-12 grid gap-10 md:grid-cols-4">
             <div className="md:col-span-2">
               <div className="flex items-center gap-2.5 mb-4">
-                <Image src="/images/logo.png" alt="Woody Pallet Blocks" width={32} height={32} className="w-8 h-8 object-contain" />
-                <span className="font-display uppercase tracking-wide text-sm text-white">Woody Pallet Blocks</span>
+                <Image src="/images/logo.png" alt="Woody Doody Pallets" width={32} height={32} className="w-8 h-8 object-contain" />
+                <span className="font-display uppercase tracking-wide text-sm text-white">Woody Doody Pallets</span>
               </div>
               <p className="text-sm max-w-sm leading-relaxed">{footerTagline}</p>
             </div>
@@ -134,7 +134,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           </div>
           <div className="border-t border-white/5">
             <div className="max-w-7xl mx-auto px-5 md:px-8 py-5 flex justify-between flex-wrap gap-2 text-xs">
-              <span>© {new Date().getFullYear()} Woody Pallet Blocks. All rights reserved.</span>
+              <span>© {new Date().getFullYear()} Woody Doody Pallets. All rights reserved.</span>
               <div className="flex gap-5">
                 <Link href="/privacy" className="hover:text-amber transition-colors">Privacy policy</Link>
                 <Link href="/terms" className="hover:text-amber transition-colors">Terms</Link>
