@@ -5,8 +5,8 @@ import { fetchContent } from "@/lib/api";
 import { MapPinIcon, PhoneIcon, EnvelopeIcon } from "@heroicons/react/24/outline";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Woody Pallet Blocks",
-  description: "Get in touch with Woody Pallet Blocks — office locations, phone, and email across the Dallas–Fort Worth area.",
+  title: "Contact Us | Woody Doody Pallets",
+  description: "Get in touch with Woody Doody Pallets — office locations, phone, and email across the Dallas–Fort Worth area.",
 };
 
 export const dynamic = "force-dynamic";
