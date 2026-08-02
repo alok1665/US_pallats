@@ -81,7 +81,7 @@ export default async function Home() {
             </div>
           </Reveal>
 
-          <Reveal delay={340}>
+          <!--<Reveal delay={340}>
             {quoteCount > 0 ? (
               <div className="mt-10 max-w-md">
                 <div className="inline-block stack-card p-6">
@@ -101,7 +101,7 @@ export default async function Home() {
                 </span>
               </div>
             )}
-          </Reveal>
+          </Reveal> -->
         </div>
       </section>
 
