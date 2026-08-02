@@ -50,7 +50,7 @@ export default async function Home() {
         <div className="absolute inset-0">
           <Image
             src="/images/hero-pallets.jpg"
-            alt="Stacked wooden pallets, Woody Pallet Blocks"
+            alt="Stacked wooden pallets, Woody Doody Pallets"
             fill
             className="object-cover"
             sizes="100vw"
