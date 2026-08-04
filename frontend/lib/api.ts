@@ -1,12 +1,20 @@
 // Two different base URLs are needed:
 // - NEXT_PUBLIC_API_URL: used by the BROWSER (login, quote form, admin panel).
-//   Must be the URL reachable from the user's machine — the mapped host port.
+//   Must be the URL reachable from the user's machine — the mapped host port,
+//   OR an empty string "" for same-origin routing (e.g. behind a reverse
+//   proxy like Caddy/Nginx that forwards /api/* to the backend on the same
+//   domain — the standard pattern for a single-domain VPS deployment).
 // - API_URL_INTERNAL: used by the Next.js SERVER itself (fetchContent/fetchSettings,
 //   called from Server Components during rendering). This runs inside the frontend
 //   Docker container, where "localhost" refers to that container, not the backend
 //   one — it needs the Docker Compose service name instead (e.g. "http://backend:8000").
-const PUBLIC_API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
-const SERVER_API_URL = process.env.API_URL_INTERNAL || PUBLIC_API_URL;
+//
+// Note: these intentionally use `??` (nullish coalescing), not `||`. With
+// `||`, an explicitly-set empty string ("" — used for same-origin routing)
+// is falsy and would incorrectly fall through to the localhost default.
+// `??` only falls through when the variable is actually unset.
+const PUBLIC_API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
+const SERVER_API_URL = process.env.API_URL_INTERNAL ?? PUBLIC_API_URL;
 
 function getApiUrl(): string {
   // No `window` means this code is running server-side (Node.js), not in the browser.
